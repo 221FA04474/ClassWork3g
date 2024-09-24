@@ -1,0 +1,649 @@
+
+/* Light Theme (default) */
+:root {
+    --background-color: #fff;
+    --text-color: #000;
+    --header-bg-color: #f4f4f4;
+    --footer-bg-color: #f4f4f4;
+    --btn-bg-color: #3498db;
+    --btn-text-color: #fff;
+}
+
+/* Dark Theme */
+body.dark-mode {
+    --background-color: #181818;
+    --text-color: #0ad9f0;
+    --header-bg-color: #222;
+    --footer-bg-color: #222;
+    --btn-bg-color: #3498db;
+    --btn-text-color: #fff;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Header and Footer */
+header, footer {
+    background-color: var(--header-bg-color);
+}
+
+button, .btn {
+    background-color: var(--btn-bg-color);
+    color: var(--btn-text-color);
+}
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--header-bg-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo-img {
+    width: 50px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #80cbc4;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #4db6ac;
+    color: var(--text-color);
+    text-align: center;
+    padding: 5rem 1rem;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.hero-buttons .btn {
+    background-color: #00796b;
+    color: var(--btn-text-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.hero-buttons .btn:hover {
+    background-color: #004d40;
+}
+
+/* Gallery Section */
+.gallery-section {
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+.text-content {
+    width: 50%;
+    padding: 3rem;
+    background-color: #e0f2f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.text-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #00796b;
+}
+
+.text-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.gallery-container {
+    width: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.gallery {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Media Query for Small Screens */
+@media screen and (max-width: 768px) {
+    .gallery-section {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .text-content {
+        width: 100%;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .gallery-container {
+        width: 100%;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--footer-bg-color);
+    color: var(--text-color);
+    padding: 2rem 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 2rem;
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+/* Responsive Footer */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+}
+
+
+/* Login & Registration Forms */
+section.login-form, section.registration-form {
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #00796b; /* Darker teal */
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+label {
+    font-size: 1rem;
+    color: #333;
+}
+
+input, select {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button.btn {
+    background-color: #00796b; /* Darker teal */
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button.btn:hover {
+    background-color: #004d40; /* Even darker teal */
+}
+
+/* Dashboard */
+.dashboard {
+    padding: 2rem;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+    font-size: 2rem;
+    color: #31e4cf; /* Darker teal */
+}
+
+/* Cards using Grid Layout */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Dynamic grid based on available space */
+    gap: 1rem;
+}
+
+.card {
+    background-color: #ffffff; /* White background for cards */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #00796b; /* Darker teal */
+}
+
+.card p {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.card a.btn {
+    display: block;
+    background-color: #00796b; /* Darker teal */
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.card a.btn:hover {
+    background-color: #004d40; /* Even darker teal */
+}
+
+/* Responsive Behavior */
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+}
+
+/* About Us Section */
+.about-us {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #e0f2f1; /* Very light teal background */
+    color: #00796b; /* Darker teal */
+}
+
+.about-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-us p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+/* Team Member Card */
+.team-member {
+    background-color: #ffffff; /* White background for team cards */
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: #00796b; /* Darker teal */
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #009688; /* Teal background for footer */
+    color: #fff;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 2rem;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.footer-section p, .footer-section ul {
+    color: #b2dfdb; /* Light teal text color */
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: #b2dfdb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+    }
+}
+.footer__socials {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer__socials a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer__socials a:hover {
+    color: #ffcc00; /* Change color on hover */
+}
+/* Ensure that the form elements are styled consistently */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Adds space between each form element */
+}
+
+label {
+    margin-bottom: 0.5rem; /* Adds space below the label */
+}
+
+input, select {
+    padding: 0.5rem; /* Adds padding inside the input/select fields */
+    margin-bottom: 1rem; /* Adds space below each input/select field */
+    border: 1px solid #ccc; /* Optional: Adds a border to the fields */
+    border-radius: 4px; /* Optional: Rounds the corners of the fields */
+}
+
+button {
+    margin-top: 1rem; /* Adds space above the buttons */
+}
+
+/* Ensure that the form elements are styled consistently */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Adds space between each form element */
+}
+
+fieldset {
+    border: 2px solid #4CAF50; /* Green border for fieldset */
+    border-radius: 8px; /* Curved corners for fieldset */
+    padding: 1rem; /* Padding inside fieldset */
+    margin-bottom: 1rem; /* Space below fieldset */
+}
+
+legend {
+    padding: 0.5rem 1rem; /* Padding around the legend text */
+    background-color: #4CAF50; /* Green background color for legend */
+    color: white; /* White text color for legend */
+    border-radius: 6px; /* Curved corners for legend */
+    font-weight: bold; /* Bold text for legend */
+    display: inline-block; /* Ensures the legend is inline with padding */
+}
+
+label {
+    margin-bottom: 0.5rem; /* Adds space below the label */
+}
+
+input, select {
+    padding: 0.5rem; /* Adds padding inside the input/select fields */
+    margin-bottom: 1rem; /* Adds space below each input/select field */
+    border: 1px solid #ccc; /* Adds a border to the fields */
+    border-radius: 4px; /* Rounds the corners of the fields */
+    box-shadow: 0 0 0 3px green; /* Adds a green margin around the input/select fields */
+}
+
+button {
+    margin-top: 1rem; /* Adds space above the buttons */
+    background-color: #4CAF50; /* Green background color for buttons */
+    color: white; /* White text color for buttons */
+    padding: 0.5rem 1rem; /* Padding inside the buttons */
+    border: none; /* Remove border from buttons */
+    border-radius: 4px; /* Rounds the corners of the buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green background on hover */
+}
+/* Style for the form actions container */
+.form-actions {
+    display: flex;
+    gap: 1rem; /* Adds space between the buttons */
+}
+
+button {
+    padding: 0.5rem 1rem; /* Padding inside the buttons */
+    border-radius: 4px; /* Rounds the corners of the buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green background on hover */
+}
+
+/* Style for the Forgot Password link */
+.login-form p {
+    margin-top: 1rem; /* Adds space above the paragraph */
+}
+
+.login-form a {
+    color: #4CAF50; /* Green color for the link */
+    text-decoration: none; /* Remove underline from the link */
+}
+
+.login-form a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Style for the dashboard section */
+.dashboard {
+    padding: 2rem;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+}
+
+.dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.dashboard-table th, .dashboard-table td {
+    border: 1px solid #ddd; /* Light gray border for table cells */
+    padding: 0.75rem; /* Padding inside cells */
+    text-align: left;
+}
+
+.dashboard-table th {
+    background-color: #4CAF50; /* Green background for table headers */
+    color: white; /* White text for table headers */
+}
+
+.dashboard-table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray background for even rows */
+}
+
+.dashboard-table tr:hover {
+    background-color: #ddd; /* Light gray background on row hover */
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50; /* Green background color for buttons */
+    color: white; /* White text color for buttons */
+    text-decoration: none; /* Remove underline from link */
+    border-radius: 4px; /* Rounds the corners of the buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.btn:hover {
+    background-color: #45a049; /* Darker green background on hover */
+}
+
+
+
+
+
+
+
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 2rem;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.footer-section {
+    color: #bdc3c7;
+}
+
+.footer-section h3 {
+    margin-bottom: 0.5rem;
+}
+
+.footer__socials {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.5rem;
+}
+
+
+
+
